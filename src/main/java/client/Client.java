@@ -1,5 +1,9 @@
 package client;
 
+import model.Person;
+import rx.Observable;
+import rx.Subscriber;
+import rx.Subscription;
 import service.PersonService;
 
 import java.util.Scanner;
@@ -24,9 +28,14 @@ public class Client {
         System.out.println();
         if (stream.equalsIgnoreCase("n")) {
             // Non responsive.
-            service.searchPersonByCountry(maxLimit, searchTerm.split(",")).forEach(System.out::println);
+            service.searchPersonByCountry(maxLimit, searchTerm.split(",")).forEach(Client::printPersonToConsole);
         } else {
-            service.searchPersonByCountryStreamed(maxLimit, searchTerm.split(",")).forEach(System.out::println);
+            Observable<Person> persons = service.searchPersonByCountryStreamed(maxLimit, searchTerm.split(","));
+            persons.subscribe(Client::printPersonToConsole);
         }
+    }
+
+    private static void printPersonToConsole(final Person person) {
+        System.out.println(person);
     }
 }

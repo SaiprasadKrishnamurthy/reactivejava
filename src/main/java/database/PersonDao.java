@@ -16,8 +16,9 @@ public class PersonDao {
 
     public List<Person> personsByCountry(final int maxLimit, final String... countryNames) {
         List<String> personCountryNames = Arrays.asList(countryNames);
-        return filter(person -> personCountryNames.stream()
-                .filter(countryName -> person.getCountry().trim().toLowerCase().contains(countryName.toLowerCase().trim())).count() > 0)
+        return filter(person ->
+                personCountryNames.stream()
+                        .filter(countryName -> person.getCountry().trim().toLowerCase().contains(countryName.toLowerCase().trim())).count() > 0)
                 .limit(maxLimit).collect(toList());
     }
 
