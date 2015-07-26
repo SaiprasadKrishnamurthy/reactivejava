@@ -23,7 +23,7 @@ To run this code, client.Client is the main entry point.
 
 ## A Sample output ##   
 ```
-########################################### Person search (Non Responsive version) #################################################
+########################################### Person search  #################################################
 
 
 Enter the country names (part of) separated by commas (For example: ndia, ger, america)	:	dia

@@ -12,7 +12,7 @@ public class Client {
     public static void main(final String[] args) throws Exception {
         PersonService service = new PersonService();
         Scanner scan = new Scanner(System.in);
-        System.out.println(" ########################################### Person search (Non Responsive version) #################################################\n\n");
+        System.out.println(" ########################################### Person search  #################################################\n\n");
         System.out.print("Enter the country names (part of) separated by commas (For example: ndia, ger, america): ");
         String searchTerm = scan.nextLine();
         System.out.println();
