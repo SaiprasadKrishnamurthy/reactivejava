@@ -19,7 +19,7 @@ This was quite useful to feel the benefits of reactive streams how this transpir
 To run this code, client.Client is the main entry point.
  
 ## To run the client ##
- mvn exec:java -Dexec.mainClass="client.Client"  
+ mvn clean install exec:java -Dexec.mainClass="client.Client"  
 ## Help
 * https://www.youtube.com/watch?v=3bAQXTVsEiQ
 
