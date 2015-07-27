@@ -51,6 +51,7 @@ Do you want the server to stream the results? (Y|N)	:	n
 * http://techblog.netflix.com/2013/02/rxjava-netflix-api.html
 * http://instil.co/2014/08/05/rxjava-in-different-flavours-of-java/
 * http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/
+* http://docs.couchbase.com/developer/java-2.0/observables.html
 
 
 
